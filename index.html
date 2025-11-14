@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Personajes de Rick y Morty</title>
+    <!-- Referencia al archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Buscador de Personajes de Rick y Morty</h1>
+            <p style="color: rgba(151, 206, 76, 0.8);">Utiliza los filtros o el botón para explorar el multiverso.</p>
+        </header>
+
+        <!-- Filtros -->
+        <div class="filter-section">
+            <h2 style="font-size: 1.8em; font-weight: 700; color: var(--rm-green); margin-bottom: 20px;">Filtros de Búsqueda</h2>
+            <form id="filterForm" class="filter-form">
+                <input type="text" id="name" placeholder="Nombre">
+
+                <select id="status">
+                    <option value="">Status (Todos)</option>
+                    <option value="alive">Vivo</option>
+                    <option value="dead">Muerto</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+
+                <input type="text" id="species" placeholder="Especie">
+
+                <input type="text" id="type" placeholder="Tipo">
+
+                <select id="gender">
+                    <option value="">Género (Todos)</option>
+                    <option value="female">Femenino</option>
+                    <option value="male">Masculino</option>
+                    <option value="genderless">Sin Género</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+
+                <button type="submit" class="btn-filter">
+                    Filtrar Personajes
+                </button>
+            </form>
+        </div>
+
+        <!-- Sección de Botones Adicionales -->
+        <div class="button-group">
+            <button id="getAllBtn" class="btn-get-all">
+                Obtener TODOS los Personajes (Pág. 1)
+            </button>
+            <button id="clearBtn" class="btn-clear">
+                Limpiar Resultados
+            </button>
+        </div>
+
+        <!-- Resultados y Mensajes -->
+        <div id="results">
+            <p id="initialMessage">
+                Presiona un botón o usa los filtros para comenzar.
+            </p>
+        </div>
+    </div>
+
+    <!-- Referencia del JS -->
+    <script src="script.js"></script>
+</body>
+</html>
